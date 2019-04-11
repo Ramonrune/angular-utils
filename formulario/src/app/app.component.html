@@ -7,7 +7,8 @@
 
   <form autocomplete="off" #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
 
-    <div class="form-group">
+    <div class="form-group"
+    [class.was-validated]="nome.invalid && nome.touched" [class.text-danger]="nome.invalid && nome.touched">
       <label class="form-control-label">Nome</label>
       <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nome" required minlength="10"
         #nome="ngModel">
@@ -24,7 +25,8 @@
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group"
+    [class.was-validated]="email.invalid && email.touched" [class.text-danger]="email.invalid && email.touched">
       <label class="form-control-label">E-mail</label>
       <input type="text" class="form-control" name="email" [(ngModel)]="cliente.email" email #email="ngModel">
 
@@ -33,7 +35,7 @@
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" [class.was-validated]="profissao.invalid && profissao.touched" [class.text-danger]="profissao.invalid && profissao.touched">
       <label class="form-control-label">Profissão</label>
       <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required #profissao="ngModel">
         <option value="">Selecione</option>

@@ -31,5 +31,6 @@ export class AppComponent {
     //console.log(form);
 
     console.log(form);
+    form.reset();
   }
 }

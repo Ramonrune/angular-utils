@@ -31,6 +31,6 @@ export class AppComponent {
     //console.log(form);
 
     console.log(form);
-    form.reset();
+    form.reset({nome: 'Ramon', profissao : ''});
   }
 }

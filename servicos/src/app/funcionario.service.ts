@@ -19,7 +19,7 @@ export class FuncionarioService {
     return this.funcionarios;
   }
 }
-
+/*
 export class FuncionarioAbreviadoService extends FuncionarioService {
 
   constructor(private numeroCaracteres: number) {
@@ -31,3 +31,4 @@ export class FuncionarioAbreviadoService extends FuncionarioService {
   }
 
 }
+*/

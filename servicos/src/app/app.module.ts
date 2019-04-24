@@ -29,9 +29,9 @@ function criarFuncionarioService2() {
   providers: [
     // {provide: FuncionarioService, useClass: FuncionarioAbreviadoService} // FuncionarioService
     // { provide: FuncionarioService, useFactory: criarFuncionarioService }
+    // { provide: 'LogPrefixo', useValue: 'LOG2' }
     FuncionarioService,
-    LogService,
-    { provide: 'LogPrefixo', useValue: 'LOG2' }
+    LogService
   ],
   bootstrap: [AppComponent]
 })

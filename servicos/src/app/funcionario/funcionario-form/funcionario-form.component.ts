@@ -1,11 +1,11 @@
-import { LogService } from './../log.service';
-import { FuncionarioService } from './../funcionario.service';
+import { FuncionarioService } from '../funcionario.service';
 import { Component, OnInit, Output , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-funcionario-form',
   templateUrl: './funcionario-form.component.html',
-  styleUrls: ['./funcionario-form.component.css']
+  styleUrls: ['./funcionario-form.component.css'],
+  providers: [FuncionarioService]
 })
 export class FuncionarioFormComponent {
 

@@ -1,4 +1,4 @@
-import { LogService } from './log.service';
+import { LogService } from '../log.service';
 import { Injectable } from '@angular/core';
 
 @Injectable()

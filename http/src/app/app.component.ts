@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   cidades = [];
 
-  constructor(private cidadeService: CidadeService) {}
+  constructor(private cidadeService: CidadeService) { }
 
   ngOnInit() {
     this.consultar();
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   adicionar(nome: string) {
-    this.cidadeService.adicionar({nome}).then(cidade => {
+    this.cidadeService.adicionar({ nome }).then(cidade => {
       alert(`Cidade ${cidade.nome} adicionada com código ${cidade.id}`);
       this.consultar();
     });
@@ -32,10 +32,15 @@ export class AppComponent implements OnInit {
   }
 
   excluir(id: number) {
-    alert(id);
+    this.cidadeService.excluir(id).then(() => {
+      alert('Cidade excluida com sucesso!');
+      this.consultar();
+    });
   }
 
   atualizar(cidade: any) {
-    alert(JSON.stringify(cidade));
+    this.cidadeService.atualizar(cidade).then(() => {
+      alert('Cidade alterada com sucesso!');
+    });
   }
 }
